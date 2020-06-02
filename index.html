@@ -78,7 +78,7 @@
 							</div>	
 							
 							<div class="float-right social-download-wrap">
-								<a href="https://drive.google.com/open?id=1BGRdmgFmZbG1Dm2zbmeK9spvTwPUGEq-" target="_blank" class="btn btn-default float-left">
+								<a href="https://drive.google.com/open?id=1BGRdmgFmZbG1Dm2zbmeK9spvTwPUGEq-" target="_blank" rel="noopener noreferrer" class="btn btn-default float-left">
 									<span class="mask"></span>
 									<span class="btn-label">
 										<b>download resume</b>
@@ -108,7 +108,7 @@
 									Interdisciplinary Software Developer with experience in web technologies, databases and cloud services. Currently pursuing a perfect blend of back-end and front-end technologies for a wide range of web development. For +3 years I've helped companies, institutions and start-ups reach business goals with productive focused, applications design. I enjoy bringing clarity to complex problems with a people first approach.
 								</p>
 								<p class="wow fadeInUp" data-wow-duration=".4s">
-									I'm a complete learning enthusiast who is self-motivated. Currently, I'm struggling to learn functional programming. Find some of my projects on <a class="goto-social" href="https://github.com/santiagocardo80" target="_blank">GitHub</a>.
+									I'm a complete learning enthusiast who is self-motivated. Currently, I'm struggling to learn functional programming. Find some of my projects on <a class="goto-social" href="https://github.com/santiagocardo80" target="_blank" rel="noopener noreferrer">GitHub</a>.
 								</p>
 							</section>
 						</div>	
@@ -480,41 +480,12 @@
 								<h6>contact</h6>
 								<div data-ng-controller="ContactController" class="align-center wow fadeInUp" data-wow-duration=".4s">
 									<h3>Hello <span  data-ng-bind="formData.inputName||'friend'"></span>, I'd love to hear from you.</h3>
-									<div>
-										<form data-ng-submit="submit(contactform, $event)"  name="contactform"  method="post" class="row form-horizontal" role="form">
-											<div class="form-group input--hoshi col-sm-6" data-ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
-												<div class="input-wrap">
-													<input autocomplete="off" data-ng-model="formData.inputName" type="text" class="form-control input__field input input__field--hoshi" id="inputName" name="inputName" placeholder="Name" required>
-													<label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1" ></label>
-												</div>	
-											</div>
-											<div class="form-group  input--hoshi col-sm-6" data-ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
-												<div class="input-wrap">
-													<input autocomplete="off" data-ng-model="formData.inputEmail" type="email" class="form-control input input__field input__field--hoshi" placeholder="Email" id="inputEmail" name="inputEmail" required>
-													<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
-												</div>	
-											</div>
-											<div class="form-group  input--hoshi col-sm-12" data-ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
-												<div class="input-wrap">
-													<textarea data-ng-model="formData.inputMessage" class="form-control input input__field input__field--hoshi" rows="4" id="inputMessage" name="inputMessage" placeholder="message" required></textarea>
-													<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
-												</div>	
-											</div>
-											<div class="form-group col-sm-12">
-												<div class="align-center">
-													<button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled">
-													<span class="mask"></span>
-													<span>send message</span>
-													</button>
-												</div>
-											</div>
-										</form>
-										<p data-ng-class="result">{{ resultMessage }}</p>
-									</div>
 								</div>
-								
 								<div class="email-direct">
-									<p class="wow fadeInRight" data-wow-duration=".4s">Or simply email me at <a href="mailto:santiagocardo80@gmail.com">santiagocardo80@gmail.com</a></p>
+									<p class="wow fadeInRight" data-wow-duration=".4s">Email me at <a href="mailto:santiagocardo80@gmail.com">santiagocardo80@gmail.com</a></p>
+									<p class="wow fadeInRight" data-wow-duration=".4s">
+										Or find me on <a class="goto-social" href="https://www.linkedin.com/in/santiagocardo" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+									</p>
 								</div>
 							</section>
 						</div>	
@@ -533,17 +504,17 @@
 											<!--Social Icons-->
 											<ul class="social-icons float-right">
 												<li>
-													<a href="https://www.facebook.com/santiago.cardona.lopez" target='_blank' class="social-icon">
+													<a href="https://www.facebook.com/santiago.cardona.lopez" target='_blank' rel="noopener noreferrer" class="social-icon">
 														<span class="fa" data-hover="&#xf09a;">&#xf09a;</span>
 													</a>
 												</li>
 												<li>
-													<a href="https://twitter.com/santiagocardo" target='_blank' class="social-icon">
+													<a href="https://twitter.com/santiagocardo" target='_blank' rel="noopener noreferrer" class="social-icon">
 														<span class="fa" data-hover="&#xf099;">&#xf099;</span>
 													</a>
 												</li>
 												<li>
-													<a href="https://www.instagram.com/santiagocardo" target='_blank' class="social-icon">
+													<a href="https://www.instagram.com/santiagocardo" target='_blank' rel="noopener noreferrer" class="social-icon">
 														<span class="fa" data-hover="&#xf16d;">&#xf16d;</span>
 													</a>
 												</li>
