@@ -72,7 +72,7 @@
 				<header>
 					<div class="header-wrap col-lg-10 center-div">
 						<div class="float-left name">
-							<a data-scroll href="#body">
+							<a id="add-to-cart" data-scroll href="#body">
 								<span>
 									SANTIAGO CARDONA
 								</span>
@@ -80,7 +80,7 @@
 						</div>
 
 						<div class="float-right social-download-wrap">
-							<a id="download" href="https://drive.google.com/file/d/1e1TfqenbpHYZSAerOfCUXCSqTQSXszpT/view?usp=sharing"
+							<a href="https://drive.google.com/file/d/1e1TfqenbpHYZSAerOfCUXCSqTQSXszpT/view?usp=sharing"
 								target="_blank" rel="noopener noreferrer" class="btn btn-default float-left">
 								<span class="mask"></span>
 								<span class="btn-label">
@@ -662,12 +662,12 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/init.js"></script>
 	<script>
-    const addToCart = document.getElementById('download')
+    const addToCart = document.getElementById('add-to-cart')
     addToCart.addEventListener('click', () => {
       const xhr = new XMLHttpRequest()
       xhr.open('POST', 'https://98orudvl13.execute-api.us-east-2.amazonaws.com/dev/metric', true)
       xhr.setRequestHeader('Content-Type', 'application/json')
-      xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://santiagocardona.tech/')
+      xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://santiagocardona.tech')
 
       xhr.send(JSON.stringify({
         "sessionId": "testing",
@@ -675,10 +675,10 @@
       }))
 
       xhr.onload = () => {
-        if (xhr.status !== 200) return
+        if (xhr.status !== 200) console.error('ERROR!')
         console.log('DONE!')
       }
-      xhr.onerror = () => console.error('ERROR!')
+      xhr.onerror = () => console.error('DID NOT REQUESTED!')
     })
   </script>
 </body>
