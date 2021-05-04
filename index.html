@@ -664,21 +664,18 @@
 	<script>
     const addToCart = document.getElementById('add-to-cart')
     addToCart.addEventListener('click', () => {
-      const xhr = new XMLHttpRequest()
-      xhr.open('POST', 'https://98orudvl13.execute-api.us-east-2.amazonaws.com/dev/metric', true)
-      xhr.setRequestHeader('Content-Type', 'application/json')
-      xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://santiagocardona.tech')
-
-      xhr.send(JSON.stringify({
-        "sessionId": "testing",
-        "metric": "add-to-cart"
-      }))
-
-      xhr.onload = () => {
-        if (xhr.status !== 200) console.error('ERROR!')
-        console.log('DONE!')
-      }
-      xhr.onerror = () => console.error('DID NOT REQUESTED!')
+			fetch('https://98orudvl13.execute-api.us-east-2.amazonaws.com/dev/metric', {
+				method: 'POST',
+				headers: {
+					'Access-Control-Allow-Origin': 'https://santiagocardona.tech'
+				},
+				body: JSON.stringify({
+					"sessionId": "testing",
+					"metric": "add-to-cart"
+				}),
+			})
+			.then(() => console.log('DONE!'))
+			.catch(err => console.error(err.message))
     })
   </script>
 </body>
