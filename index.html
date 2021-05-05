@@ -664,15 +664,14 @@
 	<script>
     const addToCart = document.getElementById('add-to-cart')
     addToCart.addEventListener('click', () => {
-			fetch('https://98orudvl13.execute-api.us-east-2.amazonaws.com/dev/metric', {
+			fetch('https://0zq3veh64l.execute-api.us-east-2.amazonaws.com/dev/metric', {
 				method: 'POST',
-				headers: {
-					'Access-Control-Allow-Origin': 'https://santiagocardona.tech'
-				},
 				body: JSON.stringify({
 					"sessionId": "testing",
-					"metric": "add-to-cart"
+					"metric": "add-to-cart",
+					"productPageView": "markers"
 				}),
+				mode: 'no-cors'
 			})
 			.then(() => console.log('DONE!'))
 			.catch(err => console.error(err.message))
