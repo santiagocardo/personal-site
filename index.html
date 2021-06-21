@@ -108,17 +108,14 @@
 								about
 							</h6>
 							<p class="pad-bottom-35 wow fadeInUp" data-wow-duration=".6s">
-								Interdisciplinary Software Developer with experience in web technologies, databases and cloud services.
-								Currently pursuing a perfect blend of back-end and front-end technologies for a wide range of web
-								development. For +4 years I've helped companies, start-ups and institutions reach business goals with
-								productive focused, applications design. I enjoy bringing clarity to complex problems with a people
-								first approach.
+								Interdisciplinary Software Developer with experience in web technologies, databases, and cloud services. Currently pursuing a perfect blend of back-end and front-end technologies for a wide range of web development. For +4 years I've helped companies, start-ups, and institutions reach business goals with productive focused, application design.
 							</p>
 							<p class="pad-bottom-35 wow fadeInUp" data-wow-duration=".4s">
-								I'm a complete learning enthusiast who is self-motivated. Currently improving my concurrent and functional programming
-								skills. Find some of my projects on <a class="goto-social" href="https://github.com/santiagocardo80"
-									target="_blank" rel="noopener noreferrer">GitHub</a> and some of my blog posts on
-									<a class="goto-social" href="https://dev.to/santiagocardo" target="_blank" rel="noopener noreferrer">Dev.to</a>.
+								I'm a complete learning enthusiast who is self-motivated, currently improving concurrent and functional programming skills. Find some of my projects on
+								<a class="goto-social" href="https://github.com/santiagocardo80" target="_blank" rel="noopener noreferrer">
+									GitHub
+								</a> and some of my blog posts on
+								<a class="goto-social" href="https://dev.to/santiagocardo" target="_blank" rel="noopener noreferrer">Dev.to</a>.
 							</p>
 							<p class="pad-bottom-35 wow fadeInUp" data-wow-duration=".2s">
 								Blog Posts
@@ -175,11 +172,9 @@
 						<section id="skill_sec"
 							class="col-lg-10 col-md-11 col-sm-11 center-div skills-wrap  sec-pad-top sec-pad-bottom-xs">
 							<h6>technical skills</h6>
-							<p class="wow fadeInUp" data-wow-duration=".4s">As a reluctant software developer, I fled from a
-								traditional path and explored my skills, trough trying my hands on various languages and
-								frameworks/libraries. Software is more than just a tool, and I try to dig deep into it. Today, I knack
-								for critical thinking, empathy, and creativity to create viable and impactful solutions using these
-								technologies.</p>
+							<p class="wow fadeInUp" data-wow-duration=".4s">
+								As a reluctant software developer, I fled from a traditional path and explored my skills, by trying my hands on various languages and frameworks/libraries. Software is more than just a tool, and I try to dig deep into it. Today, I knack for critical thinking, empathy, and creativity to create viable and impactful solutions using these technologies.
+							</p>
 							<div class="row margin-top-40">
 								<div class="col-sm-5 margin-bottom-sm">
 									<span class="progress-cat">NODE.JS</span>
@@ -675,63 +670,6 @@
 	<script src="js/froogaloop2.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/init.js"></script>
-	<script>
-		function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-			console.log('statusChangeCallback');
-			console.log(response);                   // The current login status of the person.
-			if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-				testAPI();  
-			} else {                                 // Not logged into your webpage or we are unable to tell.
-				document.getElementById('status').innerHTML = 'Please log ' +
-					'into this webpage.';
-			}
-		}
-	
-	
-		function checkLoginState() {               // Called when a person is finished with the Login Button.
-			FB.getLoginStatus(function(response) {   // See the onlogin handler
-				statusChangeCallback(response);
-			});
-		}
-	
-	
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '314009746701630',
-				cookie     : true,                     // Enable cookies to allow the server to access the session.
-				xfbml      : true,                     // Parse social plugins on this webpage.
-				version    : 'v10.0'           // Use this Graph API version for this call.
-			});
-	
-	
-			FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-				statusChangeCallback(response);        // Returns the login status.
-			});
-		};
-	 
-		function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-			console.log('Welcome!  Fetching your information.... ');
-			FB.api('/me', function(response) {
-				console.log('Successful login for: ' + response.name);
-				document.getElementById('status').innerHTML =
-					'Thanks for logging in, ' + response.name + '!';
-			});
-		}
-	
-	</script>
-	
-	
-	<!-- The JS SDK Login Button -->
-	
-	<fb:login-button scope="pages_show_list,ads_read,pages_read_engagement" onlogin="checkLoginState();">
-		Connect Ad Account
-	</fb:login-button>
-	
-	<div id="status">
-	</div>
-	
-	<!-- Load the JS SDK asynchronously -->
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 
 </html>
